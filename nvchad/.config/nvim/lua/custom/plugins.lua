@@ -46,7 +46,15 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
+  {
+    "rlue/vim-barbaric",
+    event = "BufEnter"
+  },
+  {
+    "epwalsh/obsidian.nvim",
+    lazy = true,
+    event = "BufEnter *md"
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
