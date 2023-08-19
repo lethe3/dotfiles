@@ -53,7 +53,19 @@ local plugins = {
   {
     "epwalsh/obsidian.nvim",
     lazy = true,
-    event = "BufEnter *md"
+    -- event = "BufEnter *md",
+    event = { "BufReadPre " .. vim.fn.expand "~" .. "/workspace/jinxiu/**.md" },
+    dependencies = {
+        -- Required.
+       "nvim-lua/plenary.nvim",
+    },
+    opts = {
+      dir = "~/workspace/jinxiu"
+    },
+    mappings = {}
+    -- mappings = {
+    --   ["fo"] = require("obsidian.mapping").gf_passthrough(),
+    -- }
   },
   -- To make a plugin not be loaded
   -- {

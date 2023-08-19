@@ -30,3 +30,17 @@ g.barbaric_timeout = -1
 
 -- The xkb-switch library path (for Linux xkb-switch users ONLY)
 -- g.barbaric_libxkbswitch = os.getenv("HOME") .. '/.local/lib/libxkbswitch.so'
+
+
+-- luasnip
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/lua_snippets"
+
+-- obsidian
+-- vim.keymap.set("n", "gl", function()
+--   if require("obsidian").util.cursor_on_markdown_link() then
+--     return "<cmd>ObsidianFollowLink<CR>"
+--   else
+--     return "gl"
+--   end
+-- end, { noremap = false, expr = true })
+--
